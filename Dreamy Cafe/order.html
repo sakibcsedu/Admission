@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Dreamy Cafe</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>    
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body> 
+
+	<div class="container">
+	<!-- Top box -->
+		<!-- Logo & Site Name & Navigation Bar -->
+		<div class="placeholder">
+			<div class="parallax-window" data-parallax="scroll" data-image-src="images/dreamy-cafe-background.jpg">
+				<div class="dreamCafe-header">
+					<div class="row dreamCafe-header-inner">
+						<div class="col-md-6 col-12">
+							<img src="images/dreamy-cafe-logo.jpg"  alt="Logo" class="dreamCafe-site-logo" /> 
+							<div class="dreamCafe-site-text-box">
+								<h1 class="dreamCafe-site-title">Dreamy Cafe</h1>
+								<h6 class="dreamCafe-site-description">Since 1930 we are providing best coffee.</h6>	
+							</div>
+						</div>
+						<nav class="col-md-6 col-12 dreamCafe-nav">
+							<ul class="dreamCafe-nav-ul">
+								<li class="tdreamCafe-nav-li"><a href="index.html" class="dreamCafe-nav-link active">Home</a></li>
+								<li class="dreamCafe-nav-li"><a href="order.html" class="dreamCafe-nav-link">Order</a></li>
+								<li class="dreamCafe-nav-li"><a href="register.html" class="dreamCafe-nav-link">Register</a></li>
+								<li class="dreamCafe-nav-li"><a href="features.html" class="dreamCafe-nav-link">Features</a></li>
+							</ul>
+						</nav>	
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<main>
+			<header class="row dreamCafe-welcome-section">
+				<h2 class="col-12 text-center dreamCafe-section-title">Order Please!</h2>
+			</header>
+			
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 offset-2">
+						<form action="/http://mercury.swin.
+						edu.au/it000000/cos1
+						0005/regtest.php" method="POST" class="tm-contact-form" onsubmit="validateOrderForm()">
+					        
+							<div class="form-group">
+								<p>Delivery or Pickup</p>
+								<input type="radio" id="delivery" onclick="showDeliveryAddress()" name="deliveryOrPickup" value="delivery">
+								<label for="delivery">Delivery</label><br>
+								<input type="radio" id="pickup" onclick="hideDeliveryAddress()" name="deliveryOrPickup" value="pickup">
+								<label for="pickup">Pickup</label><br>
+					        </div>
+							<br>
+
+							<div class="form-group" style="display:none" id="deliveryAddress">
+								<label for="name">Delivery Address</label>
+					          	<input id="deliveryAdd" type="text" name="deliveryAddress" class="form-control" placeholder="Delivery Address" required="" />
+					        </div>
+					        <br>
+
+					        <div class="form-group">
+								<label for="billingAddress">Billing Address</label>
+					          	<input id="billingAdd" type="text" name="billingAddress" class="form-control" placeholder="Billing Address" />
+					        </div>
+							<br>
+
+							<div class="form-group">
+								<input type="checkbox" id="myCheck" name="BillingAddress" onclick="checkBillingAddress()">
+								<label for="BillingAddress">
+									 Shipping address same as billing
+								</label>
+							</div>
+							<br>
+
+
+							<div class="form-group">
+								<label for="contactNumber">Contact Number</label>
+					          	<input type="number" name="contactNumber" class="form-control" placeholder="Contact Number" required="" />
+					        </div>
+							<br>
+
+							<div class="form-group">
+								<label for="email">Email</label>
+					          	<input type="text" name="email" class="form-control" placeholder="Email" required="" />
+					        </div>
+							<br>
+
+							<div class="form-group">
+								<p>Pay On</p>
+								<input type="radio" id="pickup" name="pay" value="Pickup" onclick="hidePaymentInformation()">
+								<label for="pickup">Pickup</label><br>
+								<input type="radio" id="online" name="pay" value="Online" onclick="showPaymentInformation()">
+								<label for="online">Online</label><br>
+					        </div>
+							<br>
+
+
+							<div class="form-group border p-2 shadow" id="payment" style="display: none">
+								<h3>Payment</h3>
+								<label for="fname">Accepted Cards</label>
+								<div class="icon-container mt-2 mb-2">
+									<i class="fa-brands fa-cc-visa" onclick="selectVisaCard()" style="color:navy; font-size:35px;"></i>
+									<i class="fa-brands fa-cc-mastercard" onclick="selectMasterCard()" style="color:red; font-size:35px;"></i>
+									<i class="fa-brands fa-cc-amex" onclick="selectAmericanExpressCard()" style="color:blue; font-size:35px;"></i>
+								</div>
+
+								<label for="cname">Name on Card</label>
+								<input type="text" id="cname" name="cardname" class="form-control" required placeholder="John More Doe">
+								<br>
+
+								<div id="visaCard">
+									<label for="ccnum">Credit card number (Visa Card)</label>
+									<input type="text" id="ccnum" name="cardnumber" class="form-control" required  placeholder="1111-2222-3333-4444">
+									<br>
+								</div>
+
+								<div id="masterCard" style="display:none">
+									<label for="ccnum">Credit card number (Master Card)</label>
+									<input type="text" id="ccnum" name="cardnumber" class="form-control" required  placeholder="1111-2222-3333-4444">
+									<br>
+								</div>
+
+								<div id="americanExpress" style="display:none">
+									<label for="ccnum">Credit card number (American Express Card)</label>
+									<input type="text" id="ccnum" name="cardnumber" class="form-control" required  placeholder="1111-222222-33333">
+									<br>
+								</div>
+								
+								<label for="postCode">Post Code</label>
+								<input type="number" id="postCode" name="postCode" class="form-control" required placeholder="1234">
+								<br>
+
+								<label for="expmonth">Exp Month</label>
+								<input type="text" id="expmonth" name="expmonth" class="form-control" required placeholder="September">
+								<br>
+
+								<label for="expyear">Exp Year</label>
+								<input type="text" id="expyear" name="expyear" class="form-control" required placeholder="2018">
+								<br>
+
+								<label for="cvv">CVV</label>
+								<input type="text" id="cvv" name="cvv" class="form-control" required placeholder="352">
+							</div>
+							<br>
+
+
+					        <div class="form-group">
+					          <textarea rows="5" name="message" class="form-control" placeholder="Message" required=""></textarea>
+					        </div>
+							<br>
+
+					        <div class="form-group d-flex ">
+					          <button type="submit" class="btn btn-success ms-auto">
+					            Send
+					          </button>
+					        </div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer class="dreamy-footer text-center">
+			<p>Copyright &copy; 2022 Dreamy Cafe </p>
+		</footer>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/parallax.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

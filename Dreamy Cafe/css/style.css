@@ -1,0 +1,152 @@
+
+ul, nav, body, h1, h2, h4, h6, p, figure {
+  margin: 0;
+  padding: 0;
+}
+
+a, button { transition: all 0.3s ease; }
+
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 17px;
+  background-color: #ccc;
+  overflow-x: hidden;
+}
+
+.container {
+  background-color: white;
+}
+
+p, address {
+  color: #626364;
+  line-height: 1.8;
+}
+
+.placeholder {
+  width: 100%;
+  min-height: 460px;
+  background-color: #556E5B;
+}
+
+.parallax-window {
+  min-height: 460px;
+  background: transparent;
+  position: relative;
+}
+
+.parallax-mirror {
+  z-index: 999 !important;
+}
+
+.dreamCafe-header {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  z-index: 1000;
+}
+
+.dreamCafe-header-inner {
+  padding: 40px 50px;
+}
+
+@media (max-width: 991px) {
+  .dreamCafe-header-inner {
+    padding: 30px 15px;
+  }
+}
+
+.dreamCafe-site-logo {
+  display: inline-block;
+  margin-right: 5px;
+  padding-bottom: 45px;
+  width: 50px;
+}
+
+.dreamCafe-site-text-box {
+  display: inline-block;
+}
+
+.dreamCafe-site-title {
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.dreamCafe-site-description {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.dreamCafe-nav {
+  text-align: right;
+  margin-top: 30px;
+}
+
+.dreamCafe-nav-ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dreamCafe-nav-li {
+  list-style: none;
+  display: block;
+  margin-bottom: 0;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+@media (max-width: 991px) {
+  .dreamCafe-nav-li {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.dreamCafe-nav-link {
+  color: white;
+  text-decoration: none;
+  padding-bottom: 10px;
+}
+
+.dreamCafe-nav-link.active,
+.dreamCafe-nav-link:hover {
+  border-bottom: 1px solid white;
+}
+
+.dreamCafe-welcome-section {
+  margin: 60px auto;
+  max-width: 655px;
+}
+
+.dreamCafe-section-title {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.dreamy-footer {
+  padding: 25px 15px;
+  margin-top: 40px;
+}
+
+.dreamy-footer a {
+  color: #626364;
+  text-decoration: none;
+}
+
+.dreamy-footer a:hover {
+  color: #1A6692;
+}
